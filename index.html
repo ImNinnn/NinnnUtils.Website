@@ -115,11 +115,14 @@
         <h3>1. What data do we collect?</h3>
         <p>We collect and store basic Discord identifiers including <strong>User IDs</strong>, <strong>Server IDs</strong>, and <strong>Channel IDs</strong>. This data is securely written to localized json files to preserve configuration settings through bot reboots.</p>
         <p>Additionally, transient message data is cached in temporary memory for a maximum duration of <strong>two hours</strong> before being permanently dropped.</p>
+        <p>We also store <strong>user settings</strong> and <strong>notes</strong> from the <code>/settings</code> and <code>/notes</code> commands in a json file.</p>
 
         <h3>2. How do we use this data?</h3>
         <ul>
             <li><strong>Identifiers (IDs):</strong> Utilized to keep track of global economy balances, level statistics, server leaderboards, board features, and to restrict access to guilds violating our Terms of Service.</li>
             <li><strong>Cached Messages:</strong> Utilized strictly to power automated features like ghost-ping detection alerts, board updates, and the <code>/deleted</code> or <code>/edited</code> utilities.</li>
+            <li><strong>User Settings:</strong>strong> Utilized to set the user's preference when using the bot.</li>
+            <li><strong>User Notes:</strong> Utilized to allow the user to write notes, create checklists and reminders, that are stored in the bot's files.</li>
         </ul>
 
         <h3>3. Who do we share data with?</h3>
