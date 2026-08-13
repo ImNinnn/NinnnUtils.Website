@@ -584,6 +584,7 @@
       <li><a href="#features">Features</a></li>
       <li><a href="#utilities">Utilities</a></li>
       <li><a href="#legal">Legal</a></li>
+      <li><a href="https://discord.gg/FSBPvc9zqY" target="_blank" rel="noopener">Support</a></li>
     </ul>
     <div class="nav-cta">
       <a class="btn btn-primary btn-sm" href="https://discord.com/oauth2/authorize?client_id=1500798502735708281" target="_blank" rel="noopener">Add to Discord</a>
@@ -728,6 +729,7 @@
         <div class="cta-actions">
           <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1500798502735708281" target="_blank" rel="noopener">＋ Add to Discord</a>
           <a class="btn btn-ghost" href="https://discord.com/discovery/applications/1500798502735708281" target="_blank" rel="noopener">Discovery page</a>
+          <a class="btn btn-ghost" href="https://discord.gg/FSBPvc9zqY" target="_blank" rel="noopener">Support server</a>
         </div>
       </div>
     </div>
@@ -771,7 +773,7 @@
           <p><strong>Nobody but me.</strong> I'm the only person with access, and live message content isn't monitored under normal use.</p>
 
           <h4>Deleting your data</h4>
-          <p>Join the support server and ask in the data-removal channel - everything tied to your profile gets wiped.</p>
+          <p>Join the <a href="https://discord.gg/FSBPvc9zqY" target="_blank" rel="noopener" style="color: var(--eye); text-decoration: underline;">support server</a> and ask in the data-removal channel - everything tied to your profile gets wiped.</p>
 
           <p class="fine">© 2026 ImNinnn. All rights reserved.</p>
         </div>
@@ -789,6 +791,7 @@
     <ul class="footer-links">
       <li><a href="https://discord.com/oauth2/authorize?client_id=1500798502735708281" target="_blank" rel="noopener">Add bot</a></li>
       <li><a href="https://discord.com/discovery/applications/1500798502735708281" target="_blank" rel="noopener">Discovery</a></li>
+      <li><a href="https://discord.gg/FSBPvc9zqY" target="_blank" rel="noopener">Support server</a></li>
       <li><a href="#legal">Legal</a></li>
     </ul>
   </div>
@@ -799,14 +802,18 @@
   (function(){
     const canvas = document.getElementById('pixel-bg');
     const ctx = canvas.getContext('2d');
-    const cols = 48, rows = 28;
+    const pixelSize = 26; // target CSS-pixel size per block, keeps blocks square on any aspect ratio
 
     function draw(){
-      const dpr = 1;
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const cols = Math.max(1, Math.round(w / pixelSize));
+      const rows = Math.max(1, Math.round(h / pixelSize));
+
       canvas.width = cols;
       canvas.height = rows;
-      canvas.style.width = '100vw';
-      canvas.style.height = '100vh';
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
 
       const c1 = [0,0,0];        // top-right
       const c2 = [115,80,80];    // bottom-left  #735050
