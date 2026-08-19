@@ -427,6 +427,57 @@
     flex-shrink:0;
   }
 
+  /* ---------- BANNER SHOWCASE ---------- */
+  .banners{padding-bottom:44px;}
+  .marquee{
+    width:100%;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+    mask-image:linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  }
+  .marquee + .marquee{margin-top:14px;}
+  .marquee-track{
+    display:flex;
+    gap:14px;
+    width:max-content;
+    animation:marquee-scroll 52s linear infinite;
+  }
+  .marquee-track.reverse{
+    animation-direction:reverse;
+  }
+  .marquee:hover .marquee-track{
+    animation-play-state:paused;
+  }
+  @keyframes marquee-scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  .banner-item{
+    position:relative;
+    flex:0 0 auto;
+    width:216px;
+    height:76px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:var(--panel);
+  }
+  .banner-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .banner-item span{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:5px 8px;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    color:var(--eye);
+    background:linear-gradient(0deg, rgba(0,0,0,0.75), transparent);
+  }
+
   /* ---------- CTA BAND ---------- */
   .cta-band{
     margin:20px 0 0;
@@ -607,6 +658,7 @@
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#utilities">Utilities</a></li>
+      <li><a href="#banners">Banners</a></li>
       <li><a href="#legal">Legal</a></li>
       <li><a href="https://discord.gg/FSBPvc9zqY" target="_blank" rel="noopener">Support</a></li>
     </ul>
@@ -743,6 +795,84 @@
     </div>
   </section>
 
+  <section class="banners" id="banners">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">Customization</span>
+        <h2>Pick a banner for every biome</h2>
+        <p>30+ welcome banners to choose from, just pick your favorite!</p>
+      </div>
+    </div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="banner-item"><img src="banners/badland_welcome.png" alt="Badland welcome banner" loading="lazy"><span>Badland</span></div>
+          <div class="banner-item"><img src="banners/birch_forest_welcome.png" alt="Birch Forest welcome banner" loading="lazy"><span>Birch Forest</span></div>
+          <div class="banner-item"><img src="banners/cherry_grove_welcome.png" alt="Cherry Grove welcome banner" loading="lazy"><span>Cherry Grove</span></div>
+          <div class="banner-item"><img src="banners/classic_milestone_welcome.png" alt="Classic Milestone welcome banner" loading="lazy"><span>Classic Milestone</span></div>
+          <div class="banner-item"><img src="banners/crismon_forest_welcome.png" alt="Crismon Forest welcome banner" loading="lazy"><span>Crismon Forest</span></div>
+          <div class="banner-item"><img src="banners/deep_cave_welcome.png" alt="Deep Cave welcome banner" loading="lazy"><span>Deep Cave</span></div>
+          <div class="banner-item"><img src="banners/desert_welcome.png" alt="Desert welcome banner" loading="lazy"><span>Desert</span></div>
+          <div class="banner-item"><img src="banners/end_island_welcome.png" alt="End Island welcome banner" loading="lazy"><span>End Island</span></div>
+          <div class="banner-item"><img src="banners/forest_welcome.png" alt="Forest welcome banner" loading="lazy"><span>Forest</span></div>
+          <div class="banner-item"><img src="banners/jungle_welcome.png" alt="Jungle welcome banner" loading="lazy"><span>Jungle</span></div>
+          <div class="banner-item"><img src="banners/nether_welcome.png" alt="Nether welcome banner" loading="lazy"><span>Nether</span></div>
+          <div class="banner-item"><img src="banners/plains_welcome.png" alt="Plains welcome banner" loading="lazy"><span>Plains</span></div>
+          <div class="banner-item"><img src="banners/snowy_taiga_welcome.png" alt="Snowy Taiga welcome banner" loading="lazy"><span>Snowy Taiga</span></div>
+          <div class="banner-item"><img src="banners/sulphur_cave_welcome.png" alt="Sulphur Cave welcome banner" loading="lazy"><span>Sulphur Cave</span></div>
+          <div class="banner-item"><img src="banners/taiga_forest_welcome.png" alt="Taiga Forest welcome banner" loading="lazy"><span>Taiga Forest</span></div>
+          <div class="banner-item"><img src="banners/badland_welcome.png" alt="Badland welcome banner" loading="lazy"><span>Badland</span></div>
+          <div class="banner-item"><img src="banners/birch_forest_welcome.png" alt="Birch Forest welcome banner" loading="lazy"><span>Birch Forest</span></div>
+          <div class="banner-item"><img src="banners/cherry_grove_welcome.png" alt="Cherry Grove welcome banner" loading="lazy"><span>Cherry Grove</span></div>
+          <div class="banner-item"><img src="banners/classic_milestone_welcome.png" alt="Classic Milestone welcome banner" loading="lazy"><span>Classic Milestone</span></div>
+          <div class="banner-item"><img src="banners/crismon_forest_welcome.png" alt="Crismon Forest welcome banner" loading="lazy"><span>Crismon Forest</span></div>
+          <div class="banner-item"><img src="banners/deep_cave_welcome.png" alt="Deep Cave welcome banner" loading="lazy"><span>Deep Cave</span></div>
+          <div class="banner-item"><img src="banners/desert_welcome.png" alt="Desert welcome banner" loading="lazy"><span>Desert</span></div>
+          <div class="banner-item"><img src="banners/end_island_welcome.png" alt="End Island welcome banner" loading="lazy"><span>End Island</span></div>
+          <div class="banner-item"><img src="banners/forest_welcome.png" alt="Forest welcome banner" loading="lazy"><span>Forest</span></div>
+          <div class="banner-item"><img src="banners/jungle_welcome.png" alt="Jungle welcome banner" loading="lazy"><span>Jungle</span></div>
+          <div class="banner-item"><img src="banners/nether_welcome.png" alt="Nether welcome banner" loading="lazy"><span>Nether</span></div>
+          <div class="banner-item"><img src="banners/plains_welcome.png" alt="Plains welcome banner" loading="lazy"><span>Plains</span></div>
+          <div class="banner-item"><img src="banners/snowy_taiga_welcome.png" alt="Snowy Taiga welcome banner" loading="lazy"><span>Snowy Taiga</span></div>
+          <div class="banner-item"><img src="banners/sulphur_cave_welcome.png" alt="Sulphur Cave welcome banner" loading="lazy"><span>Sulphur Cave</span></div>
+          <div class="banner-item"><img src="banners/taiga_forest_welcome.png" alt="Taiga Forest welcome banner" loading="lazy"><span>Taiga Forest</span></div>
+        </div>
+      </div>
+      <div class="marquee">
+        <div class="marquee-track reverse">
+          <div class="banner-item"><img src="banners/basalt_delta_welcome.png" alt="Basalt Delta welcome banner" loading="lazy"><span>Basalt Delta</span></div>
+          <div class="banner-item"><img src="banners/cave_welcome.png" alt="Cave welcome banner" loading="lazy"><span>Cave</span></div>
+          <div class="banner-item"><img src="banners/classic_alt_welcome.png" alt="Classic Alt welcome banner" loading="lazy"><span>Classic Alt</span></div>
+          <div class="banner-item"><img src="banners/classic_normal_welcome.png" alt="Classic Normal welcome banner" loading="lazy"><span>Classic Normal</span></div>
+          <div class="banner-item"><img src="banners/dark_forest_welcome.png" alt="Dark Forest welcome banner" loading="lazy"><span>Dark Forest</span></div>
+          <div class="banner-item"><img src="banners/deep_dark_welcome.png" alt="Deep Dark welcome banner" loading="lazy"><span>Deep Dark</span></div>
+          <div class="banner-item"><img src="banners/dripstone_cave_welcome.png" alt="Dripstone Cave welcome banner" loading="lazy"><span>Dripstone Cave</span></div>
+          <div class="banner-item"><img src="banners/end_welcome.png" alt="End welcome banner" loading="lazy"><span>End</span></div>
+          <div class="banner-item"><img src="banners/glowberry_cave_welcome.png" alt="Glowberry Cave welcome banner" loading="lazy"><span>Glowberry Cave</span></div>
+          <div class="banner-item"><img src="banners/mangrove_swamp_welcome.png" alt="Mangrove Swamp welcome banner" loading="lazy"><span>Mangrove Swamp</span></div>
+          <div class="banner-item"><img src="banners/pale_garden_welcome.png" alt="Pale Garden welcome banner" loading="lazy"><span>Pale Garden</span></div>
+          <div class="banner-item"><img src="banners/snowy_plains_welcome.png" alt="Snowy Plains welcome banner" loading="lazy"><span>Snowy Plains</span></div>
+          <div class="banner-item"><img src="banners/soul_valley_welcome.png" alt="Soul Valley welcome banner" loading="lazy"><span>Soul Valley</span></div>
+          <div class="banner-item"><img src="banners/swamp_welcome.png" alt="Swamp welcome banner" loading="lazy"><span>Swamp</span></div>
+          <div class="banner-item"><img src="banners/warped_forest_welcome.png" alt="Warped Forest welcome banner" loading="lazy"><span>Warped Forest</span></div>
+          <div class="banner-item"><img src="banners/basalt_delta_welcome.png" alt="Basalt Delta welcome banner" loading="lazy"><span>Basalt Delta</span></div>
+          <div class="banner-item"><img src="banners/cave_welcome.png" alt="Cave welcome banner" loading="lazy"><span>Cave</span></div>
+          <div class="banner-item"><img src="banners/classic_alt_welcome.png" alt="Classic Alt welcome banner" loading="lazy"><span>Classic Alt</span></div>
+          <div class="banner-item"><img src="banners/classic_normal_welcome.png" alt="Classic Normal welcome banner" loading="lazy"><span>Classic Normal</span></div>
+          <div class="banner-item"><img src="banners/dark_forest_welcome.png" alt="Dark Forest welcome banner" loading="lazy"><span>Dark Forest</span></div>
+          <div class="banner-item"><img src="banners/deep_dark_welcome.png" alt="Deep Dark welcome banner" loading="lazy"><span>Deep Dark</span></div>
+          <div class="banner-item"><img src="banners/dripstone_cave_welcome.png" alt="Dripstone Cave welcome banner" loading="lazy"><span>Dripstone Cave</span></div>
+          <div class="banner-item"><img src="banners/end_welcome.png" alt="End welcome banner" loading="lazy"><span>End</span></div>
+          <div class="banner-item"><img src="banners/glowberry_cave_welcome.png" alt="Glowberry Cave welcome banner" loading="lazy"><span>Glowberry Cave</span></div>
+          <div class="banner-item"><img src="banners/mangrove_swamp_welcome.png" alt="Mangrove Swamp welcome banner" loading="lazy"><span>Mangrove Swamp</span></div>
+          <div class="banner-item"><img src="banners/pale_garden_welcome.png" alt="Pale Garden welcome banner" loading="lazy"><span>Pale Garden</span></div>
+          <div class="banner-item"><img src="banners/snowy_plains_welcome.png" alt="Snowy Plains welcome banner" loading="lazy"><span>Snowy Plains</span></div>
+          <div class="banner-item"><img src="banners/soul_valley_welcome.png" alt="Soul Valley welcome banner" loading="lazy"><span>Soul Valley</span></div>
+          <div class="banner-item"><img src="banners/swamp_welcome.png" alt="Swamp welcome banner" loading="lazy"><span>Swamp</span></div>
+          <div class="banner-item"><img src="banners/warped_forest_welcome.png" alt="Warped Forest welcome banner" loading="lazy"><span>Warped Forest</span></div>
+        </div>
+      </div>
+  </section>
+
   <section class="cta-band">
     <div class="wrap">
       <div class="cta-panel">
@@ -810,7 +940,7 @@
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-left">
-      made with <span class="heart">♥</span> by ImNinnn | with the help of claude AI - not affiliated with Discord Inc.
+      made with <span class="heart">♥</span> by ImNinnn - not affiliated with Discord Inc.
     </div>
     <ul class="footer-links">
       <li><a href="https://discord.com/oauth2/authorize?client_id=1500798502735708281" target="_blank" rel="noopener">Add bot</a></li>
